@@ -18,5 +18,3 @@ test('divide 2 / 0 to equal null', () => {
   expect(divide(2, 0)).toBe(null);
   expect(divide(3, 0)).toBe(null);
 });
-
-
