@@ -4,13 +4,13 @@ describe('Test for Person', () => {
   let person;
 
   beforeAll(() => {
-    person = new Person('Mario', 45, 1.78);
+    person = new Person('Mario', 45, 1.78); // Arrange
   });
 
   test('should return normal', () => {
     person.weight = 70;
-    const imc = person.calcIMC();
-    expect(imc).toBe('normal');
+    const imc = person.calcIMC(); // Act / When
+    expect(imc).toBe('normal'); // Assert / Then
   });
 
   test('should return down', () => {
