@@ -1,9 +1,8 @@
+const mockGetAll = jest.fn();
 const { generateManyBooks } = require('../fakes/book.fake');
 const BookService = require('./books.service');
 
-const mockGetAll = jest.fn();
-
-jest.mock('../lib/mongo.lib', () => jest.fn().mockImplementation(() => ({
+jest.mock('../src/lib/mongo.lib', () => jest.fn().mockImplementation(() => ({
   getAll: mockGetAll,
   create: () => { },
 })));
@@ -14,6 +13,7 @@ describe('Test for BookService', () => {
     service = new BookService();
     jest.clearAllMocks();
   });
+
   describe('test for getBooks', () => {
     test('Should return book list', async () => {
       // Arrange
