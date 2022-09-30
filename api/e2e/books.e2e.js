@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 const createApp = require('../src/app');
 const { config } = require('../src/config');
 
-jest.setTimeout(10000);
+jest.setTimeout(9000);
 
 const DB_NAME = config.dbName;
 const DB_URL = config.dbUrl;
