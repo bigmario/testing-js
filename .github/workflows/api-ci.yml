@@ -46,6 +46,7 @@ jobs:
       - name: run unit test
         shell: bash
         run: npm run test
+
   e2e:
     runs-on: ubuntu-latest
     container:
